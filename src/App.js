@@ -1,23 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+import theRaidPoster from './Raod-Poster.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Kelly's Kodflix App</h1>
-        <p>hi</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={theRaidPoster} alt="the-raid-movie-poster"/>
     </div>
   );
 }
