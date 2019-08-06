@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+
+img {
+  width: 20%;
+}
+
+.container {
+  display: flex;
+  /* flex-direction: row */
+}
+
+.movie {
+  flex: 1;
+  margin: 30px;
+}
+
