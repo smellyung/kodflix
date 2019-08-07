@@ -7,17 +7,43 @@ img {
   width: 100%
 }
 
+p {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
 .container {
+  display: flex
+}
+
+.title-overlay {
   display: flex;
-  /* flex-direction: row */
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%
+}
+
+.movie:hover .title-overlay {
+  opacity: 0.8
 }
 
 .movie {
-  flex: 1
+  flex: 1;
+  position: relative
 }
 
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+
+  .title-overlay {
+    height: 25%
   }
 }
