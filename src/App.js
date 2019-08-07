@@ -1,4 +1,5 @@
 import React from 'react';
+import Movie from './Movie.js';
 import blackMirrorPoster from './images/black-mirror.jpg';
 import breakingBadPoster from './images/breaking-bad.jpg';
 import deathNotePoster from './images/death-note.jpg';
@@ -11,46 +12,27 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="movie">
-          <img src={blackMirrorPoster} alt="black-mirror-poster" />
-          <div className="title-overlay">
-            <p>Black Mirror</p>
-          </div>
-        </div>
-        <div className="movie">
-          <img src={breakingBadPoster} alt="breaking-bad-poster" />
-          <div className="title-overlay">
-            <p>Breaking Bad</p>
-            </div>
-        </div>
-        <div className="movie">
-          <img src={deathNotePoster} alt="death-note-poster" />
-          <div className="title-overlay">
-            <p>Death Note</p>
-          </div>
-        </div>
+        <Movie
+          title="Black Mirror"
+          logo={blackMirrorPoster} />
+        <Movie
+          title="Breaking Bad"
+          logo={breakingBadPoster} />
+        <Movie
+          title="Death Note"
+          logo={deathNotePoster} />
       </div>
       <div className="container">
-        <div className="movie">
-          <img src={gameOfThronesPoster} alt="game-of-thrones-poster" />
-          <div className="title-overlay">
-            <p>Game of Thrones</p>
-          </div>
-        </div>
-        <div className="movie">
-         <img src={theWalkingDeadPoster} alt="the-walking-dead-poster" />
-         <div className="title-overlay">
-           <p>The Walking Dead</p>
-          </div>
-        </div>
-        <div className="movie">
-         <img src={theWirePoster} alt="the-wire-poster" />
-         <div className="title-overlay">
-           <p>The Wire</p>
-          </div>
-        </div>
+        <Movie
+          title="Game of Thrones"
+          logo={gameOfThronesPoster} />
+        <Movie
+        title="The Walking Dead"
+        logo={theWalkingDeadPoster} />
+        <Movie
+        title="The Wire"
+        logo={theWirePoster} />
       </div>
-
     </div>
   );
 }
