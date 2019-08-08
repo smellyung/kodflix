@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Details() {
+export default function Details({ match }) {
     return (
         <div>
-            <h3>Details Page</h3>
+            <p>{match.params.id}</p>
             <p>Hello, this will be the details page for each Movie & TV show :)</p>
         </div>
     );

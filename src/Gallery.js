@@ -11,14 +11,14 @@ export default function Gallery(props) {
   return (
     <> 
       <div className="container">
-        <Movie title="Black Mirror" logo={blackMirrorPoster} />
-        <Movie title="Breaking Bad" logo={breakingBadPoster} />
-        <Movie title="Death Note" logo={deathNotePoster} />
+        <Movie title="Black Mirror" logo={blackMirrorPoster} id="black-mirror" />
+        <Movie title="Breaking Bad" logo={breakingBadPoster} id="breaking-bad" />
+        <Movie title="Death Note" logo={deathNotePoster} id="death-note" />
       </div>
       <div className="container">
-        <Movie title="Game of Thrones" logo={gameOfThronesPoster} />
-        <Movie title="The Walking Dead" logo={theWalkingDeadPoster} />
-        <Movie title="The Wire" logo={theWirePoster} />
+        <Movie title="Game of Thrones" logo={gameOfThronesPoster} id="game-of-thrones" />
+        <Movie title="The Walking Dead" logo={theWalkingDeadPoster} id="the-walking-dead" />
+        <Movie title="The Wire" logo={theWirePoster} id="the-wire" />
       </div>
     </>
   );
