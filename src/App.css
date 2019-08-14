@@ -14,13 +14,20 @@ p {
 }
 
 .container {
-  display: flex
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* auto-fit > span all available space on screen 
+  1fr > all elements have the same dimension*/
+  /* display: flex;
+  flex-wrap: wrap; */
+  
 }
 
 .movie {
-  flex: 1;
+  /* flex: 1;
+  flex-basis: 120px; */
   position: relative;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .title-overlay {
@@ -40,7 +47,7 @@ p {
   bottom: 0
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
   }
@@ -48,4 +55,4 @@ p {
   .title-overlay {
     height: 25%
   }
-}
+} */
