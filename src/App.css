@@ -8,7 +8,7 @@ img {
 }
 
 p {
-  font-size: 50px;
+  font-size: 25px;
   font-weight: bold;
   color: white;
 }
@@ -18,14 +18,9 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   /* auto-fit > span all available space on screen 
   1fr > all elements have the same dimension*/
-  /* display: flex;
-  flex-wrap: wrap; */
-  
 }
 
 .movie {
-  /* flex: 1;
-  flex-basis: 120px; */
   position: relative;
   overflow: hidden;
 }
@@ -46,13 +41,3 @@ p {
 .movie:hover .title-overlay {
   bottom: 0
 }
-
-/* @media only screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .title-overlay {
-    height: 25%
-  }
-} */
