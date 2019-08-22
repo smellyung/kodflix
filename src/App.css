@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color:black
 }
 
 img {
@@ -10,10 +9,10 @@ img {
 p {
   font-size: 25px;
   font-weight: bold;
-  color: white;
 }
 
 .container {
+  background-color: black;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   /* auto-fit > span all available space on screen 
