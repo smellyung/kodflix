@@ -25,6 +25,7 @@ p {
 }
 
 .title-overlay {
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
