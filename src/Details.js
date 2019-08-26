@@ -4,9 +4,6 @@ import getGallery from './gallery-get';
 import { Redirect } from 'react-router-dom';
 
 export default function Details({ match }) {
-    const [detailsMessage, setDetailsMessage] = useState(
-            'Hello, this will be the details page for each Movie & TV show :)'
-        );
     const [movie, setMovie] = useState ('');
     const movieId = match.params.movieId;
     const matchedMovie = getGallery().find(movie => 
@@ -15,9 +12,6 @@ export default function Details({ match }) {
     
     useEffect(() => {
         setMovie(matchedMovie);
-        setTimeout(() => {
-            setDetailsMessage('Coming soon! :)')
-        }, 3000);
     });
 
     if (movie === undefined) {
@@ -26,10 +20,15 @@ export default function Details({ match }) {
         );
     } else {
         return (
-            <div>
-                <p>{movie.title}</p>
-                <p>{detailsMessage}</p>
-            </div>
+            <>
+                <div>
+                    <p className='title'>{movie.title}</p>
+                </div>
+                <div>
+                    <p>movie description coming soon</p>
+                    <img src={movie.poster} alt={`${movie.title} poster`}/>
+                </div>
+            </>
         );
     }
 }
