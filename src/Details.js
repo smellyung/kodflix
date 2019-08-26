@@ -21,7 +21,7 @@ export default function Details({ match }) {
                 <p className='title'>{movie.title}</p>
             </div>
             <div>
-                <p>movie description coming soon</p>
+                <p>{movie.synopsis}</p>
                 <img src={movie.poster} alt={`${movie.title} poster`}/>
             </div>
         </>
