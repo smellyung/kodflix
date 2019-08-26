@@ -41,3 +41,7 @@ p {
 .movie:hover .title-overlay {
   bottom: 0
 }
+
+.movie-details {
+  display: flex;
+}

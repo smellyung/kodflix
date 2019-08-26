@@ -20,7 +20,7 @@ export default function Details({ match }) {
             <div>
                 <p className='title'>{movie.title}</p>
             </div>
-            <div>
+            <div className='movie-details'>
                 <p>{movie.synopsis}</p>
                 <img src={movie.poster} alt={`${movie.title} poster`}/>
             </div>
