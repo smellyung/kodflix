@@ -14,21 +14,15 @@ export default function Details({ match }) {
         setMovie(matchedMovie);
     }, [matchedMovie]);
 
-    if (movie === undefined) {
-        return (
-            <Redirect to='/not-found' />
-        );
-    } else {
-        return (
-            <>
-                <div>
-                    <p className='title'>{movie.title}</p>
-                </div>
-                <div>
-                    <p>movie description coming soon</p>
-                    <img src={movie.poster} alt={`${movie.title} poster`}/>
-                </div>
-            </>
-        );
-    }
+    return movie === undefined ? 
+        <Redirect to='/not-found' /> : 
+        <>
+            <div>
+                <p className='title'>{movie.title}</p>
+            </div>
+            <div>
+                <p>movie description coming soon</p>
+                <img src={movie.poster} alt={`${movie.title} poster`}/>
+            </div>
+        </>
 }
