@@ -12,7 +12,7 @@ export default function Details({ match }) {
     
     useEffect(() => {
         setMovie(matchedMovie);
-    });
+    }, [matchedMovie]);
 
     if (movie === undefined) {
         return (
