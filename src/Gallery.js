@@ -11,7 +11,7 @@ export default function Gallery(props) {
               <Movie 
                 key={movie.id}
                 title={movie.title} 
-                logo={movie.logo} 
+                poster={movie.poster}
                 id={movie.id} />
           ))
         }
