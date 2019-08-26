@@ -45,3 +45,9 @@ p {
 .movie-details {
   display: flex;
 }
+
+@media only screen and (max-width: 500px) {
+  .movie-details {
+    display: block;
+  }
+}
