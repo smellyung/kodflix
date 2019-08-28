@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import getGallery from './gallery-get';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 export default function Details({ match }) {
     const [movie, setMovie] = useState ('');
@@ -23,6 +23,9 @@ export default function Details({ match }) {
             <div className='movie-details'>
                 <p>{movie.synopsis}</p>
                 <img src={movie.poster} alt={`${movie.title} poster`}/>
+            </div>
+            <div className='homepage-link'>
+                <p><Link to='/'>Back to home page</Link></p>
             </div>
         </>
 }
