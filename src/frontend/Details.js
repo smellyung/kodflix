@@ -13,7 +13,6 @@ export default function Details({ match }) {
                 let matchedMovie = gallery.find(movie => 
                     movie.id === movieId
                 );
-                debugger
                 setMovie(matchedMovie);
             })
     }, []);
