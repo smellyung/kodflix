@@ -7,7 +7,7 @@ export default function Gallery(props) {
     fetch('/rest/gallery')
       .then(response => response.json())
       .then(movies => setGallery(movies))
-  });
+  }, []);
   return (
     <> 
       <div className="container">
