@@ -1,31 +1,43 @@
 
 import React, { useState, useEffect } from 'react';
-import getGallery from './gallery-get';
 import { Redirect, Link } from 'react-router-dom';
 
 export default function Details({ match }) {
-    const [movie, setMovie] = useState ('');
-    const movieId = match.params.movieId;
-    const matchedMovie = getGallery().find(movie => 
-        movie.id === movieId
-    );
+    const [movie, setMovie] = useState('');
     
     useEffect(() => {
-        setMovie(matchedMovie);
-    }, [matchedMovie]);
+        fetch('/rest/gallery')
+            .then(response => response.json())
+            .then((gallery) => {
+                let movieId = match.params.movieId;
+                let matchedMovie = gallery.find(movie => 
+                    movie.id === movieId
+                );
+                debugger
+                setMovie(matchedMovie);
+            })
+    }, []);
 
     return movie === undefined ? 
-        <Redirect to='/not-found' /> : 
+        <Redirect to='/not-found' /> :
+        movie.id ? 
+            <DetailsContent movie={movie} /> :
+            <div />;
+}
+
+function DetailsContent({ movie }) {
+    return (
         <>
             <div>
                 <p className='title'>{movie.title}</p>
             </div>
             <div className='movie-details'>
                 <p>{movie.synopsis}</p>
-                <img src={movie.poster} alt={`${movie.title} poster`}/>
+                <img src={require(`./common/images/${movie.id}.jpg`)} alt={`${movie.title} poster`}/>
             </div>
             <div className='homepage-link'>
                 <p><Link to='/'>Back to home page</Link></p>
             </div>
         </>
+    );
 }
