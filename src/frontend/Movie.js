@@ -1,16 +1,15 @@
 import React from 'react';
-
 import { Link } from "react-router-dom";
 
 
-export default function Movie(props) {
+export default function Movie({ id, title }) {
     return (
         <div className="movie">
-            <Link to={`/${props.id}`}>
-                <img src={props.poster} alt={`${props.title} logo`} />
+            <Link to={`/${id}`}>
+                <img src={require(`./common/images/${id}.jpg`)} alt={`${title} logo`} />
             </Link>
             <div className="title-overlay">
-                <p>{props.title}</p>
+                <p>{title}</p>
             </div>
         </div>
     );
