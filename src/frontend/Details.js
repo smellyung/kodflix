@@ -13,9 +13,10 @@ export default function Details({ match }) {
                 let matchedMovie = gallery.find(movie => 
                     movie.id === movieId
                 );
+                debugger
                 setMovie(matchedMovie);
             })
-    }, []);
+    }, [match.params.movieId]);
 
     return movie === undefined ? 
         <Redirect to='/not-found' /> :
