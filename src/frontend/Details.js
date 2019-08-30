@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 
 export default function Details({ match }) {
-    const [movie, setMovie] = useState('');
+    const [movie, setMovie] = useState({});
     
     useEffect(() => {
         fetch('/rest/gallery')
