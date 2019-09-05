@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Redirect, Link } from 'react-router-dom';
+import Loading from './common/Loading.js';
 
 export default function Details({ match }) {
     const [movie, setMovie] = useState({});
@@ -13,21 +14,20 @@ export default function Details({ match }) {
                 let matchedMovie = gallery.find(movie => 
                     movie.id === movieId
                 );
-                debugger
                 setMovie(matchedMovie);
             })
     }, [match.params.movieId]);
 
     return movie === undefined ? 
-        <Redirect to='/not-found' /> :
+         <Redirect to='/not-found' /> :
         movie.id ? 
             <DetailsContent movie={movie} /> :
-            <div />;
+            <Loading />;
 }
 
 function DetailsContent({ movie }) {
     return (
-        <>
+        <div>
             <div>
                 <p className='title'>{movie.title}</p>
             </div>
@@ -38,6 +38,6 @@ function DetailsContent({ movie }) {
             <div className='homepage-link'>
                 <p><Link to='/'>Back to home page</Link></p>
             </div>
-        </>
+        </div>
     );
 }
