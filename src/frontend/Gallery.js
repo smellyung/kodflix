@@ -8,8 +8,11 @@ export default function Gallery() {
     //fetch data in gallery backend
     fetch('/rest/gallery')
       .then(response => response.json())
-      .then(backendGallery => setGallery(backendGallery))
-      .catch(() => console.log('data not fetched'))
+      .then(backendGallery => {
+        console.log(backendGallery);
+        setGallery(backendGallery);
+      })
+      .catch((err) => console.log(err))
   }, []);
 
   // return <Loading />;
